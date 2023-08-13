@@ -1,7 +1,7 @@
 # Cortical Representations of Languages during Natural Dialogue
 Yamashita M., Kubo R., and Nishimoto. S. 2023, bioRxiv
 
-![Figure1](https://github.com/yamashita-lang/dialogue/assets/141693211/7854d5eb-121b-4964-a85e-63830f2142fa)
+![Figure1](Figure1.png)
 
 ## Data
 Available at [OpenNeuro](https://openneuro.org/datasets/ds004669)
