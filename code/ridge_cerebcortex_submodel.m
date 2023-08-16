@@ -47,12 +47,12 @@ for ses = 1:IND.ses_num
     disp('===================================================================')
 
     % Load BOLD response [Time x Voxels], separately for training and testing 
-    load([DataDir '/RespData_' ID '_ses-' num2str(ses) '_' PRM.taskname '_bold' ]);
+    load([IND.DataDir '/RespData_' ID '_ses-' num2str(ses) '_' PRM.taskname '_bold' ]);
     respTrn_ROI = RespData.respTrn; respTest_ROI = RespData.respTest;
     
     
     % Load stimulus [Time x Stimuli], separately for training and testing
-    load([DataDir '/StimData_' PRM.LLM '_' ID '_ses-' num2str(ses) '_' PRM.taskname ]); 
+    load([IND.DataDir '/StimData_' PRM.LLM '_' ID '_ses-' num2str(ses) '_' PRM.taskname ]); 
     disp(['full stimuli size: ' num2str(size(stimTrn,1)) ' x ' num2str(size(stimTrn,2))]);
 
     % Extract features used in the current model
