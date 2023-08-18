@@ -115,7 +115,7 @@ for ses = 1:IND.ses_num
         ws = ridgemulti(stimTrn(ssinds(dd).trnInd,:), respTrn_ROI(ssinds(dd).trnInd,:), PRM.ridge_as);
 
         % Validation
-        ccs=zeros(length(tvoxels),length(PRM.ridge_as));
+        ccs=zeros(length(IND.tvoxels),length(PRM.ridge_as));
         for ii=1:length(PRM.ridge_as)
             presp = stimTrn(ssinds(dd).regInd,:)*ws(:,:,ii); % predicted responses
             ccs(:,ii) = mvn_corr(presp, respTrn_ROI(ssinds(dd).regInd,:));
