@@ -124,7 +124,7 @@ for ses = 1:IND.ses_num
     disp('calculating test performance...');
     w = ridgemulti(stimTrn, respTrn_ROI, PRM.ridge_as(baind));
     presp = stimTest*w;
-    ccs = mvn_corr(presp, respVal_ROI); % test predictions
+    ccs = mvn_corr(presp, respTest_ROI); % test predictions
     fprintf('mean ccs = %.3f\n', nanmean(ccs));
 
     Result.session = ses;
@@ -132,7 +132,7 @@ for ses = 1:IND.ses_num
     Result.w = w;
     Result.ccs = ccs; 
     Result.mean_ccs = nanmean(ccs);
-    Result.resp = respVal_ROI;
+    Result.resp = respTest_ROI;
     Result.presp = presp;
 
     idx=0;
