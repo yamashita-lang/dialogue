@@ -1,10 +1,11 @@
-function ridge_fdrcorr_meainfeatures(ID)
+function ridge_fdrcorr_meainfeatures(ID, modality)
 % ridge_fdrcorr_meainfeatures.m
 %
 % FDR correction for multiple comparison (Benjamini & Hochberg, 1995)
 %
 % Inputs: ID      : subject ID (e.g. 'sub-OSU01')
 %
+%         modality: 1: same, 2: cross
 
 
 %%
