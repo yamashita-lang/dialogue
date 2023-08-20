@@ -37,7 +37,7 @@ for ses = 1:IND.ses_num
 
     
     % Make random correlation coefficient histogram
-    for ii = 1:vset_info.nvoxels(di);
+    for ii = 1:IND.nvoxels;
     	A = normrnd(0,1,size(Result.resp,1),1); B = normrnd(0,1,size(Result.resp,1),1);
     	rccs(ii) = corr2(A,B);
     end
