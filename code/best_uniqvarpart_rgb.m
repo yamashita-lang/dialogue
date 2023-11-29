@@ -5,6 +5,9 @@ function best_uniqvarpart_rgb(ID)
 %
 % Inputs: ID     : subject ID (e.g. 'sub-OSU01')
 %
+% Outputs:  'RidgeResults_CHATGPTNEOX_sub-OSU01_VarPart_ccs.mat'
+%			'RidgeResults_CHATGPTNEOX_sub-OSU01_VarPart_RGB.nii'
+%
 
 
 %%
@@ -47,7 +50,7 @@ disp(['svoxels: ' num2str(length(mean_Result.svoxels)) ' voxels']);
 % Data for IND.tvoxels
 NR = zeros(size(IND.tvoxels)); NG = zeros(size(IND.tvoxels)); NB = zeros(size(IND.tvoxels)); NRGB = zeros(size(IND.tvoxels));
 for vv = 1:length(A)
-    NR(mean_Result.svoxels(vv)) = VR(vv); NG(mean_Result.svoxels(vv)) = VG(vv); NB(svoxels(vv)) = VB(vv); NRGB(mean_Result.svoxels(vv)) = VRGB(vv);
+	NR(mean_Result.svoxels(vv)) = VR(vv); NG(mean_Result.svoxels(vv)) = VG(vv); NB(mean_Result.svoxels(vv)) = VB(vv); NRGB(mean_Result.svoxels(vv)) = VRGB(vv);
 end
 
 
@@ -56,15 +59,15 @@ YR = NaN(prod(IND.datasize),1); YG = NaN(prod(IND.datasize),1); YB = NaN(prod(IN
 YRGB = NaN(prod(IND.datasize),1);
 
 for ii=1:length(IND.tvoxels)
-    YR(IND.tvoxels(ii))= NR(ii); YG(IND.tvoxels(ii))= NG(ii); YB(IND.tvoxels(ii))= NB(ii); % YX(IND.tvoxels(ii))= NX(ii); 
+	YR(IND.tvoxels(ii))= NR(ii); YG(IND.tvoxels(ii))= NG(ii); YB(IND.tvoxels(ii))= NB(ii); % YX(IND.tvoxels(ii))= NX(ii); 
 	YRGB(IND.tvoxels(ii))= NRGB(ii);
 end
 
 
 niifile = [ PRM.SaveDir IND.file_prefix '_VarPart' ];
-vol = reshape(YR,IND.datasize); vol_perm = permute(vol, [2,1,3]); V = MRIread(IND.RefEPI); V.vol = vol_perm; MRIwrite(V,[niifile '_R.nii']);
-vol = reshape(YB,IND.datasize); vol_perm = permute(vol, [2,1,3]); V = MRIread(IND.RefEPI); V.vol = vol_perm; MRIwrite(V,[niifile '_B.nii']);
-vol = reshape(YG,IND.datasize); vol_perm = permute(vol, [2,1,3]); V = MRIread(IND.RefEPI); V.vol = vol_perm; MRIwrite(V,[niifile '_G.nii']);
+% vol = reshape(YR,IND.datasize); vol_perm = permute(vol, [2,1,3]); V = MRIread(IND.RefEPI); V.vol = vol_perm; MRIwrite(V,[niifile '_R.nii']);
+% vol = reshape(YB,IND.datasize); vol_perm = permute(vol, [2,1,3]); V = MRIread(IND.RefEPI); V.vol = vol_perm; MRIwrite(V,[niifile '_B.nii']);
+% vol = reshape(YG,IND.datasize); vol_perm = permute(vol, [2,1,3]); V = MRIread(IND.RefEPI); V.vol = vol_perm; MRIwrite(V,[niifile '_G.nii']);
 vol = reshape(YRGB,IND.datasize); vol_perm = permute(vol, [2,1,3]); V = MRIread(IND.RefEPI); V.vol = vol_perm; MRIwrite(V,[niifile '_RGB.nii']);
 
 end
