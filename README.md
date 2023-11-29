@@ -117,7 +117,7 @@ Perform principal component analysis for semantic weights combined across partic
 - Expected inputs:
 	- RidgeResults_CHATGPTNEOX_sub-OSU08_ses-[1, ..., n].mat
 	- RidgeResults_CHATGPTNEOX_sub-OSU08_FDRcorr_mean.mat
--Expected outputs:
+- Expected outputs:
 	- RidgeResults_CHATGPTNEOX_sub-OSU08_meanweight.mat
 	- Weight_CHATGPTNEOX_sub-OSU08_Prod.mat
 	- GroupWeight_CHATGPTNEOX_Prod.mat
