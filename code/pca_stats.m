@@ -11,6 +11,18 @@ function pca_stats(md_idx, sig_pc, mode)
 %                  2: Correlation with low-level features (Figure 5 b,e)
 %                  3: Correlation with part-of-speech weights (Figure 5 c,f)
 %                  4: RGB color corresponding PC1/2/3 for each utterance (Figure 5 g,h)
+%
+% Outputs:  'Uniq_embedding_CHATGPTNEOX_Prod_sub-OSU01.mat'
+%           'GroupEmb_Prod_uniq.mat'
+%           'PCA_Result_CHATGPTNEOX_Prod_high_PC1.txt'
+%           'PCA_Result_CHATGPTNEOX_Prod_low_PC1.txt'
+%           'PCA_Result_CHATGPTNEOX_Prod_PC_vs_LowLevelFeatures.csv'
+%           'Corr_PCA_vs_POS_CHATGPTNEOX_Prod_sub-OSU01.mat'
+%           'GroupMean_Corr_PCA_vs_POS_CHATGPTNEOX_Prod.mat'
+%           'PCload_CHATGPTNEOX_Prod.mat'
+%           'PCload_CHATGPTNEOX_Prod.txt'
+%           'PCload_CHATGPTNEOX_Prod_RGB_R.txt'
+%
 
 
 %%
@@ -238,7 +250,7 @@ switch mode
         % 1 Calculate Pearson correaltion for each participant
 
         for ss = 1:length(PRM.SubjectsList)
-            ID = ['sub-OSU0' char(PRM.SubjectsList(ss)) ];
+            ID = ['sub-OSU' char(PRM.SubjectsList(ss)) ];
             disp(['===== Subject ' ID '  ====='])
             IND=load_parameters_ind(ID, PRM);
 
