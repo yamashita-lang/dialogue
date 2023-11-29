@@ -3,12 +3,16 @@ function pca_bootstrap(md_idx, mode)
 % 
 % PCA for bootstrap resampled data 
 %
+% Note: utterance_file ('Stim_Utterance_Prod_sub-OSU01.mat') includes
+%            sensitive information about participants and only avilable upon reasonable request.
+%
 % Inputs: md_idx : modality index (1: production, 2: comprehension)
 %
 %         mode   : 1: bootstrap, 2: pvalue
 %
-% Caution: utterance_file ('Stim_Utterance_' name '_' ID '.mat') includes
-%            sensitive information and thus is only avilable upon reasonable request.
+% Outputs:  'PCA_bootstrap_CHATGPTNEOX_Prod.mat'
+%           'PCA_bootstrap_CHATGPTNEOX_Prod_pval.csv'
+%           'PCA_bootstrap_CHATGPTNEOX_Prod.csv'
 %
 
 
