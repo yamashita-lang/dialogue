@@ -6,6 +6,9 @@ function ridge_cerebcortex_submodel(ID, rd_idx)
 % Inputs: ID     : subject ID (e.g. 'sub-OSU01')
 %
 %         rd_idx : index for reduced model (1: prod_LLM, 2: prod_ccg, ..., 10: comp_mrpl, 11: comp_pos)
+%
+% Outputs:  'RidgeResults_sub-OSU01_ses-1_1234567891011.mat'
+%
 
 
 %%
