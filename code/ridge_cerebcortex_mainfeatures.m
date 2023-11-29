@@ -5,6 +5,8 @@ function ridge_cerebcortex_mainfeatures(ID)
 %
 % Inputs: ID     : subject ID (e.g. 'sub-OSU01')
 %
+% Outputs:  'RidgeResults_CHATGPTNEOX_sub-OSU01_ses-1_MainFeatures.mat'
+%
 
 
 %%
@@ -132,7 +134,7 @@ for ses = 1:IND.ses_num
     Result.w = w;
     Result.ccs = ccs; 
     Result.mean_ccs = nanmean(ccs);
-    Result.resp = respTest_ROI;
+    Result.n_sample = size(respTest_ROI,1);
     Result.presp = presp;
 
     idx=0;
