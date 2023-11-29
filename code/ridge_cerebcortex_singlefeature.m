@@ -6,6 +6,9 @@ function ridge_cerebcortex_singlefeature(ID, md_idx)
 % Inputs: ID     : subject ID (e.g. 'sub-OSU01')
 %
 %         md_idx : modality index (1: production, 2: comprehension)
+%
+% Outputs:  'RidgeResults_CHATGPTNEOX_sub-OSU01_ses-1_SingleFeature_1.mat'
+%
 
 
 %%
@@ -95,7 +98,7 @@ for ses = 1:IND.ses_num
                     ;
                 end
             elseif md_idx == 2
-                if ii == length(Features)+main_idx && modality == md_idx
+                if ii == length(PRM.Features)+main_idx && modality == md_idx
                     target_stimTrn = horzcat(target_stimTrn, stimTrn(:,stim_index));
                     target_stimTest = horzcat(target_stimTest, stimTest(:,stim_index));
                 else
@@ -153,7 +156,7 @@ for ses = 1:IND.ses_num
     Result.w = w;
     Result.ccs = ccs; 
     Result.mean_ccs = nanmean(ccs);
-    Result.resp = respTest_ROI;
+    Result.n_sample = size(respTest_ROI, 1);
     Result.presp = presp;
 
     mapidx=0;
