@@ -5,6 +5,11 @@ function ridge_cerebcortex_uniqvarpart_reduced(ID)
 %
 % Inputs: ID     : subject ID (e.g. 'sub-OSU01')
 %
+% Outputs:  'RidgeResults_CHATGPTNEOX_sub-OSU01_SingleFeature_Intersection.nii'
+%           'RidgeResults_CHATGPTNEOX_sub-OSU01_SingleFeature_Prod_RC.nii'
+%           'RidgeResults_CHATGPTNEOX_sub-OSU01_SingleFeature_Comp_RC.nii'
+%           'RidgeResults_CHATGPTNEOX_sub-OSU01_SingleFeature_VarPart.mat'
+%
 
 
 %%
@@ -35,15 +40,18 @@ disp('Data from union (production, comprehension)')
 % Concatenate LLM production comprehension results across sessions
 resp=[]; presp=[];
 for ses = 1:IND.ses_num
-	ses_result=[ PRM.SaveDir IND.file_prefix '_ses-' num2str(ses) '_MainFeatures.mat' ];
+    full_result=[ PRM.SaveDir IND.file_prefix '_ses-' num2str(ses) '.mat' ]; load(full_result); tmp_resp=Result.resp; clear Result;
+
+	ses_result=[ PRM.SaveDir IND.file_prefix '_ses-' num2str(ses) '_MainFeatures.mat' ]; 
 	disp(['loading ' ses_result ]); load(ses_result);
 	
 	if ses == 1
-		resp = Result.resp; prespU = Result.presp;
+		resp = tmp_resp; prespU = Result.presp;
 	else
-		resp = [resp; Result.resp ]; prespU = [prespU; Result.presp ];
+		resp = [resp; tmp_resp ]; prespU = [prespU; Result.presp ];
 	end
 end
+clear Result;
 
 
 % Significantly predicted voxels from mean results across sessions
@@ -73,6 +81,8 @@ for ses = 1:IND.ses_num
 		prespProd = [prespProd; Result.presp(:, mean_Result.svoxels) ];
 	end
 end
+clear Result;
+
 RProd = 1 - sum((prespProd - resp).^2) ./ Tvar;
 
 
@@ -87,6 +97,8 @@ for ses = 1:IND.ses_num
 		prespComp = [prespComp; Result.presp(:, mean_Result.svoxels) ];
 	end
 end
+clear Reslt;
+
 RComp = 1 - sum((prespComp - resp).^2) ./ Tvar;
 
 % Relative complement
