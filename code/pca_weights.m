@@ -6,6 +6,13 @@ function pca_weights(md_idx, sig_pc)
 % Inputs: md_idx : modality index (1: production, 2: comprehension)
 %
 %         sig_pc : number of significant PCs
+%
+% Outputs:  'RidgeResults_CHATGPTNEOX_sub-OSU01_meanweight.mat'
+%           'Weight_CHATGPTNEOX_sub-OSU01_Prod.mat'
+%           'GroupWeight_CHATGPTNEOX_Prod.mat'
+%           'PCA_Results_CHATGPTNEOX_Prod.mat'
+%           'PCA_Results_CHATGPTNEOX_sub-OSU01_Prod_RGBmap_R.nii'
+%
 
 
 %%
@@ -201,7 +208,7 @@ for ss = 1:length(PRM.SubjectsList)
             end
 
             vol = reshape(Y,IND.datasize); vol_perm = permute(vol, [2,1,3]); V = MRIread(IND.RefEPI); V.vol = vol_perm;
-            MRIwrite(V, [ PRM.SaveDir 'PCA_Result_' PRM.LLM '_' ID '_' name '_RGBmap_'  cName '.nii']);
+            MRIwrite(V, [ PRM.SaveDir 'PCA_Results_' PRM.LLM '_' ID '_' name '_RGBmap_'  cName '.nii']);
         end     
     end
 
