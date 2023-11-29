@@ -5,6 +5,9 @@ function ridge_session_average_mainfeatures(ID)
 %
 % Inputs: ID     : subject ID (e.g. 'sub-OSU01')
 %
+% Outputs:  'RidgeResults_CHATGPTNEOX_sub-OSU01_MainFeatures_FDRcorr_mean.mat'
+%			'RidgeResults_CHATGPTNEOX_sub-OSU01_MainFeatures_FDRcorr_mean.nii'
+%
 
 
 %%
