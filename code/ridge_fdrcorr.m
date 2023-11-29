@@ -6,6 +6,9 @@ function ridge_fdrcorr(ID, modality)
 % Inputs: ID      : subject ID (e.g. 'sub-OSU01')
 %
 %         modality: 1: same, 2: cross
+%
+% Outputs:  'RidgeResults_sub-OSU01_ses-1.mat'
+%
 
 
 %%
