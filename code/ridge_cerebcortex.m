@@ -6,6 +6,8 @@ function ridge_cerebcortex(ID)
 %
 % Inputs: ID     : subject ID (e.g. 'sub-OSU01')
 %
+% Outputs:  'RidgeResults_sub-OSU01_ses-1.mat'
+%
 
 
 %%
