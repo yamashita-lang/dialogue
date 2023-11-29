@@ -5,6 +5,9 @@ function ridge_cerebcortex_uniqvarpart(ID)
 %
 % Inputs: ID     : subject ID (e.g. 'sub-OSU01')
 %
+% Outputs:  'RidgeResults_CHATGPTNEOX_sub-OSU01_POS_Prod_UniqVP.nii'
+%			'RidgeResults_CHATGPTNEOX_sub-OSU01_UniqVP_POS_Prod.mat'
+%
 
 
 %%
@@ -61,7 +64,7 @@ for modality = [1 2]
 				subFeatures_name = [ subFeatures_name char(num2str(PRM.Features_index(jj))) ];
 			end
 
-			image_result_file=[PRM.SaveDir IND.file_prefix '_' char(PRM.Features{mm}) '_' result_fileName '_UniqVP.nii' ];
+			image_result_file=[PRM.SaveDir IND.file_prefix '_UniqVP_' char(PRM.Features{mm}) '_' result_fileName '.nii' ];
 			if exist(image_result_file)
 				disp('- - - Previously analyzed - - -');
 			else
