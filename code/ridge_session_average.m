@@ -5,6 +5,9 @@ function ridge_session_average(ID)
 %
 % Inputs: ID     : subject ID (e.g. 'sub-OSU01')
 %
+% Outputs:  'RidgeResults_sub-OSU01_same_FDRcorr_mean.nii'
+%           'RidgeResults_sub-OSU01_cross_FDRcorr_mean.nii'
+%           'RidgeResults_sub-OSU01_FDRcorr_mean.mat'
 
 
 %%
