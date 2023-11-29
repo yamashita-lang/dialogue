@@ -13,15 +13,18 @@ SubjectsList = { '01', '02', '03', '04', '05', '06', '07', '08' };
 group_name = '01_02_03_04_05_06_07_08';
 
 
-ProjectDir = '/mount/nfs3/ymm/OpenNeuro/';
-SaveDir = [ ProjectDir '/results/'];
+ProjectDir = '/home/open/dialogue/';
+
+data_from_openneuro = [ ProjectDir '/derivative/' ];
+code_from_github = [ ProjectDir '/code/' ];
+SaveDir = [ data_from_openneuro '/results/'];
 
 if ~exist(SaveDir)
     mkdir(SaveDir)
 end
 
-% data_from_openneuro = [ ProjectDir '/derivative/' ];
-% code_from_github = [ ProjectDir '/code/' ];
+addpath(code_from_github);
+addpath([code_from_github 'util']);
 
 
 %%
@@ -141,6 +144,8 @@ PRM.COMPdim=COMPdim;
 PRM.ALLdim=ALLdim;
 PRM.Prod_index=Prod_index;
 PRM.Comp_index=Comp_index;
+PRM.POS_Prod_index=POS_Prod_index;
+PRM.POS_Comp_index=POS_Comp_index;
 PRM.ridge_as=ridge_as;
 PRM.Q=Q;
 PRM.PCANvoxel=PCANvoxel;
