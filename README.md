@@ -37,7 +37,6 @@ We share data on [OpenNeuro](https://openneuro.org/datasets/ds004669). Store der
 - Individual fMRI target space (target.nii)
 - FreeSurfer ROI information (vset_info.mat)
 - PyCortex database (overlays.svg)
-- Transcribed utterances will be shared upon reasonable request.
 
 # Full Analysis
 
