@@ -149,4 +149,4 @@ python summary_wrapper.py
 
 ## Cortical maps by Pycortex
 
-pycortex_example.ipynb
+example_pycortex.ipynb
