@@ -15,10 +15,13 @@ Yamashita M., Kubo R., and Nishimoto. S. 2023, [bioRxiv](https://doi.org/10.1101
 
 ## Software requirements
 
-- Python 3
+Python 3
 - [Himalaya](https://github.com/gallantlab/himalaya) (confirmed on ver. 0.4.2)
 - [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/) (confirmed on ver. 6.0)
-- [Pycortex](https://github.com/gallantlab/pycortex) (confirmed on ver. 1.2) 
+- [Pycortex](https://github.com/gallantlab/pycortex) (confirmed on ver. 1.2)
+
+R (for the linear mixed-effects model analysis)
+- [lmerTest](https://cran.r-project.org/web/packages/lmerTest/) (confirmed on ver. 3.1-3)
 
 # Installation Guide
 
