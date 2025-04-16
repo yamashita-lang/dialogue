@@ -15,10 +15,16 @@ Yamashita M., Kubo R., and Nishimoto. S. 2023, [bioRxiv](https://doi.org/10.1101
 
 ## Software requirements
 
-Python 3
+Python 3 (for ridge regression anlysis and makeing plots)
+- [NumPy](https://numpy.org/) (confirmed on ver. 1.26.4)
+- [SciPy](https://scipy.org/) (confirmed on ver. 1.12.0)
+- [Scikit-learn](https://scikit-learn.org/) (confirmed on ver. 1.4.0)
 - [Himalaya](https://github.com/gallantlab/himalaya) (confirmed on ver. 0.4.2)
-- [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/) (confirmed on ver. 6.0)
+- [Matplotlib](https://matplotlib.org/) (confirmed on ver. 3.8.2)
+- [seaborn](https://seaborn.pydata.org/) (confirmed on ver. 0.13.2)
 - [Pycortex](https://github.com/gallantlab/pycortex) (confirmed on ver. 1.2)
+
+FreeSurfer (for Pycortex; https://surfer.nmr.mgh.harvard.edu/) (confirmed on ver. 6.0)
 
 R (for the linear mixed-effects model analysis)
 - [lmerTest](https://cran.r-project.org/web/packages/lmerTest/) (confirmed on ver. 3.1-3)
