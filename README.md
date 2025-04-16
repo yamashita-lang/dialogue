@@ -16,7 +16,7 @@ Yamashita M., Kubo R., and Nishimoto. S. 2023, [bioRxiv](https://doi.org/10.1101
 ## Software requirements
 
 - Python 3
-- [Himalaya](https://github.com/gallantlab/himalaya) (confirmed on ver. 0.4.0)
+- [Himalaya](https://github.com/gallantlab/himalaya) (confirmed on ver. 0.4.2)
 - [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/) (confirmed on ver. 6.0)
 - [Pycortex](https://github.com/gallantlab/pycortex) (confirmed on ver. 1.2) 
 
@@ -36,7 +36,7 @@ We share data on [OpenNeuro](https://openneuro.org/datasets/ds004669). Store der
 - Stimulus GPT embeddings (sub-OSU01_chatgptneox_cl-1.hdf)
 - Individual fMRI target space (target.nii)
 - FreeSurfer ROI information (vset_info.mat)
-- PyCortex database (overlays.svg)
+- Pycortex database (overlays.svg)
 
 # Full Analysis
 
@@ -143,6 +143,9 @@ Princiapl component analysis for GPT embeddings.
 ```
 python summary_wrapper.py
 ```
+
+## 6. Linear mixed-effects analysis
+lme_analysis.R
 
 
 # Visualization
