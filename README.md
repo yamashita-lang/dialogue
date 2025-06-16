@@ -1,5 +1,5 @@
-# Cortical representations of languages during natural dialogue
-Yamashita M., Kubo R., and Nishimoto. S. 2023, [bioRxiv](https://doi.org/10.1101/2023.08.21.553821)
+# Conversational content is organized across multiple timescales in the brain
+Yamashita M., Kubo R., and Nishimoto. S. 2023, [Nature Human Behaviour](https://doi.org/10.1038/s41562-025-02231-4)
 
 - [System Requirements](#system-requirements)
 - [Installation Guide](#installation-guide)
