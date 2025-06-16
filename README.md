@@ -1,5 +1,5 @@
 # Conversational content is organized across multiple timescales in the brain
-Yamashita M., Kubo R., and Nishimoto. S. 2023, [Nature Human Behaviour](https://doi.org/10.1038/s41562-025-02231-4)
+Yamashita M., Kubo R., and Nishimoto. S. 2025, [Nature Human Behaviour](https://doi.org/10.1038/s41562-025-02231-4)
 
 - [System Requirements](#system-requirements)
 - [Installation Guide](#installation-guide)
